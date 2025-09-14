@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 350px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #3f72af;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100px; /* Chiều rộng cố định cho label */
+    text-align: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-left: none; /* Bỏ viền trái để nối liền với label */
+}
+
+.remember-me {
+    justify-content: flex-end;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.remember-me label {
+    background-color: transparent;
+    color: #000;
+    width: auto;
+    font-weight: normal;
+    padding: 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #46b8da;
+}
