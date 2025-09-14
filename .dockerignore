@@ -1,0 +1,16 @@
+# Bỏ qua các thư mục và file của Git
+.git/
+.gitignore
+
+# Bỏ qua các file Python không cần thiết
+__pycache__/
+*.pyc
+*.pyo
+
+# Bỏ qua các file liên quan đến môi trường
+.env
+venv/
+
+# Bỏ qua cơ sở dữ liệu và các file media
+db.sqlite3
+media/
