@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Chào mừng, {{ user.username }}!</h2>
+        {% if user.is_authenticated %}
+            <p>Bạn đã đăng nhập thành công.</p>
+            <a href="{% url 'logout' %}">Đăng xuất</a>
+        {% else %}
+            <p>Bạn cần đăng nhập.</p>
+            <a href="{% url 'login' %}">Đăng nhập</a>
+        {% endif %}
+    </div>
+</body>
+</html>
