@@ -14,17 +14,26 @@
             {% csrf_token %}
             {% for field in form %}
                 <div class="form-group">
-                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <label for="{{ field.id_for_label }}">
+                        {% if field.label == "Username" %}
+                            Tên
+                        {% elif field.label == "Email" %}
+                            Gmail
+                        {% elif field.label == "Password" %}
+                            Mật khẩu
+                        {% elif field.label == "Confirm password" %}
+                            Nhập Lại Mật khẩu
+                        {% else %}
+                            {{ field.label }}
+                        {% endif %}
+                    </label>
                     {{ field }}
                 </div>
             {% endfor %}
-            <div class="form-group">
-                <label for="id_confirm_password">Xác nhận mật khẩu</label>
-                {{ form.confirm_password }}
-            </div>
             <div class="button-group">
                 <button type="submit" class="btn">Đăng ký</button>
             </div>
+            <p style="text-align: center;">Đã có tài khoản? <a href="{% url 'login' %}">Đăng nhập ngay</a></p>
             {% if messages %}
                 {% for message in messages %}
                     <p style="color: green;">{{ message }}</p>
